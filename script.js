@@ -1,21 +1,21 @@
 // 14 - Make a staircase upto  the given number using '#' and blank spaces ' '
-// function makeStaircase(n) {
-//   let str = "";
-//   for (let i = 0; i < n; i++) {
-//     for (let index = 0; index < n - i; index++) {
-//       str = str + " ";
-//     }
+function makeStaircase(n) {
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    for (let index = 0; index < n - i; index++) {
+      str = str + " ";
+    }
 
-//     for (let j = 0; j < i; j++) {
-//       str = str + "#";
-//     }
-//     str += "\n";
-//   }
+    for (let j = 0; j < i; j++) {
+      str = str + "#";
+    }
+    str += "\n";
+  }
 
-//   console.log(str);
-// }
+  console.log(str);
+}
 
-// makeStaircase(5);
+makeStaircase(5);
 // -----------------------------------------------------------------------------------------
 
 // 13 - Calculate ratio of elements that are positive, negative and zero in an array of integers
