@@ -2,7 +2,7 @@
 function makeStaircase(n) {
   let str = "";
   for (let i = 0; i < n; i++) {
-    for (let index = 0; index < n - i; index++) {
+    for (let index = 0; index < n - i -1; index++) {
       str = str + " ";
     }
 
@@ -267,13 +267,13 @@ makeStaircase(5);
 //     let temp = a + b;
 //     a = b;
 //     b = temp;
-//     console.log(b);
+//     // console.log(b);
 //   }
 
 //   return n === 0 ? a : b;
 // }
 
-// console.log(fibonacciNumbers(20)); // -> 55
+// console.log(fibonacciNumbers(10)); // -> 55
 
 // -----------------------------------------------------------------------------------------
 
