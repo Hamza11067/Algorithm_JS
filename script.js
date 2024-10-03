@@ -1,21 +1,58 @@
-// 14 - Make a staircase upto  the given number using '#' and blank spaces ' '
-function makeStaircase(n) {
-  let str = "";
-  for (let i = 0; i < n; i++) {
-    for (let index = 0; index < n - i -1; index++) {
-      str = str + " ";
-    }
+// 16 - Find leap years upto next 20 years
+// function findNextLeapYears(n) {
+//   let currentYear = new Date().getFullYear();
+//   let leapYears = [];
+//   for (let i = currentYear + 1; i <= currentYear + n; i++) {
+//     if (i % 4 == 0) {
+//       leapYears.push(i);
+//     }
+//   }
+//   console.log(leapYears);
+// }
 
-    for (let j = 0; j < i; j++) {
-      str = str + "#";
+// console.log(findNextLeapYears(20));
+// -----------------------------------------------------------------------------------------
+
+// 15 - You have an array, find minimum sum of the numbers (one less than total numbers) and the maximun
+function minmaxSum(array) {
+  let minSum = 0;
+  let maxSum = 0;
+  let arr = array.sort();
+  for (let i = 0; i < arr.length; i++) {
+    if (i != 0) {
+      maxSum += arr[i];
     }
-    str += "\n";
+    if (i != arr.length - 1) {
+      minSum += arr[i];
+    }
   }
-
-  console.log(str);
+  console.log(minSum, maxSum);
 }
 
-makeStaircase(5);
+// console.log(minmaxSum([1, 3, 5, 7, 9]));
+console.log(minmaxSum([7, 69, 2, 221, 8974]));
+// -----------------------------------------------------------------------------------------
+
+// 14 - Make a staircase upto  the given number using '#' and blank spaces ' '
+// function makeStaircase(n) {
+//   let str = "";
+//   for (let i = 1; i <= n; i++) {
+//     for (let index = 0; index < n - i; index++) {
+//       str = str + " ";
+//     }
+
+//     for (let j = 0; j < i; j++) {
+//       str = str + "#";
+//     }
+//     if(n != i) {
+//         str += "\n";
+//     }
+//   }
+
+//   console.log(str);
+// }
+
+// makeStaircase(6);
 // -----------------------------------------------------------------------------------------
 
 // 13 - Calculate ratio of elements that are positive, negative and zero in an array of integers
@@ -260,17 +297,28 @@ makeStaircase(5);
 // 10 - Fibonacci Number of the given number
 
 // function fibonacciNumbers(n) {
-//   let a = 0;
-//   let b = 1;
-
-//   for (let i = 0; i <= n - 2; i++) {
-//     let temp = a + b;
-//     a = b;
-//     b = temp;
-//     // console.log(b);
+//   // method one
+//   let a=[0,1];
+//   let b=[];
+//   for(let i=2; i<n; i++){
+//     b=a[a.length-2] + a[a.length-1];
+//     a[i] = b;
 //   }
+//   console.log(a);
 
-//   return n === 0 ? a : b;
+  // method two
+
+  // let a = 0;
+  // let b = 1;
+
+  // for (let i = 0; i <= n - 2; i++) {
+  //   let temp = a + b;
+  //   a = b;
+  //   b = temp;
+  //   // console.log(b);
+  // }
+
+  // return n === 0 ? a : b;
 // }
 
 // console.log(fibonacciNumbers(10)); // -> 55
