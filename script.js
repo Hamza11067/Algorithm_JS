@@ -1,3 +1,54 @@
+// 19 - Find the largest number in an array and how many times it occured
+// let arr = [4, 4, 1, 3];
+// let count = 0;
+// let largest = arr[0];
+// for (let i = 0; i < arr.length; i++) {
+//   if (largest < arr[i]) {
+//     largest = arr[i];
+//   }
+//   if (largest == arr[i]) {
+//     count++;
+//   }
+// }
+// console.log(largest, count);
+// -----------------------------------------------------------------------------------------
+
+// 18 - Find union of two arrays
+// function union(a, b) {
+//   let c = [];
+//   for (let i = 0; i < a.length; i++) {
+//     for (let j = 0; j < b.length; j++) {
+//       if (a[i] == b[j]) {
+//         c.push(a[i]);
+//       }
+//     }
+//   }
+//   return c;
+// }
+// let a = [1, 2, 3, 4, 5];
+// let b = [3, 4, 5, 6, 7];
+// console.log(intersection(a, b));
+
+// -----------------------------------------------------------------------------------------
+
+// 17 - Find Intersection of two arrays
+// function intersection(a, b) {
+//   let c = [];
+//   for (let i = 0; i < a.length; i++) {
+//     for (let j = 0; j < b.length; j++) {
+//       if (a[i] == b[j]) {
+//         c.push(a[i]);
+//       }
+//     }
+//   }
+//   return c;
+// }
+// let a = [1, 2, 3, 4, 5];
+// let b = [3, 4, 5, 6, 7];
+// console.log(intersection(a, b));
+
+// -----------------------------------------------------------------------------------------
+
 // 16 - Find leap years upto next 20 years
 // function findNextLeapYears(n) {
 //   let currentYear = new Date().getFullYear();
@@ -11,26 +62,27 @@
 // }
 
 // console.log(findNextLeapYears(20));
+
 // -----------------------------------------------------------------------------------------
 
 // 15 - You have an array, find minimum sum of the numbers (one less than total numbers) and the maximun
-function minmaxSum(array) {
-  let minSum = 0;
-  let maxSum = 0;
-  let arr = array.sort();
-  for (let i = 0; i < arr.length; i++) {
-    if (i != 0) {
-      maxSum += arr[i];
-    }
-    if (i != arr.length - 1) {
-      minSum += arr[i];
-    }
-  }
-  console.log(minSum, maxSum);
-}
+// function minmaxSum(array) {
+//   let minSum = 0;
+//   let maxSum = 0;
+//   let arr = array.sort();
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i != 0) {
+//       maxSum += arr[i];
+//     }
+//     if (i != arr.length - 1) {
+//       minSum += arr[i];
+//     }
+//   }
+//   console.log(minSum, maxSum);
+// }
 
-// console.log(minmaxSum([1, 3, 5, 7, 9]));
-console.log(minmaxSum([7, 69, 2, 221, 8974]));
+// // console.log(minmaxSum([1, 3, 5, 7, 9]));
+// console.log(minmaxSum([7, 69, 2, 221, 8974]));
 // -----------------------------------------------------------------------------------------
 
 // 14 - Make a staircase upto  the given number using '#' and blank spaces ' '
@@ -306,19 +358,19 @@ console.log(minmaxSum([7, 69, 2, 221, 8974]));
 //   }
 //   console.log(a);
 
-  // method two
+// method two
 
-  // let a = 0;
-  // let b = 1;
+// let a = 0;
+// let b = 1;
 
-  // for (let i = 0; i <= n - 2; i++) {
-  //   let temp = a + b;
-  //   a = b;
-  //   b = temp;
-  //   // console.log(b);
-  // }
+// for (let i = 0; i <= n - 2; i++) {
+//   let temp = a + b;
+//   a = b;
+//   b = temp;
+//   // console.log(b);
+// }
 
-  // return n === 0 ? a : b;
+// return n === 0 ? a : b;
 // }
 
 // console.log(fibonacciNumbers(10)); // -> 55
@@ -327,22 +379,20 @@ console.log(minmaxSum([7, 69, 2, 221, 8974]));
 
 // 11 - Sort an array using bubble sort algorithm
 
-// let arr = [3, 2, 5, 9, 7, 1, 0, 4, 6, 8];
+let arr = [3, 2, 5, 9, 7, 1, 0, 4, 6, 8];
+function bubbleSort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
 
-// function bubbleSort(arr) {
-
-//   for (let i = 0; i < arr.length - 1; i++) {
-//     for (let j = 0; j < arr.length - 1 - i; j++) {
-//       if (arr[j] > arr[j + 1]) {
-//         let temp = arr[j];
-//         arr[j] = arr[j + 1];
-//         arr[j + 1] = temp;
-//       }
-//     }
-//   }
-//   return arr;
-// }
-
-// console.log(bubbleSort(arr));
+console.log(bubbleSort(arr));
 
 // -----------------------------------------------------------------------------------------
