@@ -1,10 +1,11 @@
 // 19 - Find the largest number in an array and how many times it occured
-// let arr = [4, 4, 1, 3];
+// let arr = [4, 4, 1, 5, 5, 3, 3];
 // let count = 0;
 // let largest = arr[0];
 // for (let i = 0; i < arr.length; i++) {
 //   if (largest < arr[i]) {
 //     largest = arr[i];
+//     count = 0;
 //   }
 //   if (largest == arr[i]) {
 //     count++;
@@ -379,20 +380,20 @@
 
 // 11 - Sort an array using bubble sort algorithm
 
-let arr = [3, 2, 5, 9, 7, 1, 0, 4, 6, 8];
-function bubbleSort(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = 0; j < arr.length - 1 - i; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
-    }
-  }
-  return arr;
-}
+// let arr = [3, 2, 5, 9, 7, 1, 0, 4, 6, 8];
+// function bubbleSort(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     for (let j = 0; j < arr.length - 1 - i; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return arr;
+// }
 
-console.log(bubbleSort(arr));
+// console.log(bubbleSort(arr));
 
 // -----------------------------------------------------------------------------------------
