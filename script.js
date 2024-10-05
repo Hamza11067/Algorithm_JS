@@ -1,3 +1,25 @@
+// 20 - Convert the 12 hour format to 24 hour format
+//    - Sample input '07:05:45PM' | Sample output '19:05:45'
+let time12h = "07:05:45AM";
+function convertTimeTo24h(time12h) {
+  let format = time12h.slice(-2);
+  let time = time12h.slice(0, -2);
+  let [hours, minutes, seconds] = time.split(":");
+  hours = parseInt(hours, 10);
+
+  if (format === "PM" && hours !== 12) {
+    hours += 12;
+  }
+  if (format === "AM" && hours === 12) {
+    hours = 0;
+  }
+  hours = String(hours).padStart(2, "0");
+  return `${hours}:${minutes}:${seconds}`;
+}
+
+console.log(convertTimeTo24h(time12h));
+// -----------------------------------------------------------------------------------------
+
 // 19 - Find the largest number in an array and how many times it occured
 // let arr = [4, 4, 1, 5, 5, 3, 3];
 // let count = 0;
@@ -12,6 +34,7 @@
 //   }
 // }
 // console.log(largest, count);
+
 // -----------------------------------------------------------------------------------------
 
 // 18 - Find union of two arrays
