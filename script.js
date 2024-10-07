@@ -1,5 +1,19 @@
 // 22 - Rounding off the grades, you wil receive an array of grades of students
-
+//      if the grade is multiple of 5 and less than 3 we round it to the next multiple of 5
+//      otherwise we keep it same
+let arr = [73, 67, 38, 33];
+function roundOff(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let remainder = arr[i] % 5;
+    console.log(remainder);
+    let addition = 5 - remainder;
+    if (remainder > 2 && arr[i] > 37) {
+      arr[i] += addition;
+    }
+  }
+  return arr;
+}
+console.log(roundOff(arr)); // [75, 67, 40, 33];
 // -----------------------------------------------------------------------------------------
 
 // 21 - Find if the given number is prime or not
@@ -19,7 +33,6 @@
 // isPrime(417);
 
 // -----------------------------------------------------------------------------------------
-
 
 // 20 - Convert the 12 hour format to 24 hour format
 //    - Sample input '07:05:45PM' | Sample output '19:05:45'
