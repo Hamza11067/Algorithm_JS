@@ -1,23 +1,48 @@
+// 22 - Rounding off the grades, you wil receive an array of grades of students
+
+// -----------------------------------------------------------------------------------------
+
+// 21 - Find if the given number is prime or not
+
+// function isPrime(n) {
+//   let flag = 1;
+//   for (let i = 2; i < n; i++) {
+//     if (n % i == 0) {
+//       flag = 0;
+//     }
+//   }
+//   return flag == 1
+//     ? console.log("This is a prime number")
+//     : console.log("This is not a prime number");
+// }
+
+// isPrime(417);
+
+// -----------------------------------------------------------------------------------------
+
+
 // 20 - Convert the 12 hour format to 24 hour format
 //    - Sample input '07:05:45PM' | Sample output '19:05:45'
-let time12h = "07:05:45AM";
-function convertTimeTo24h(time12h) {
-  let format = time12h.slice(-2);
-  let time = time12h.slice(0, -2);
-  let [hours, minutes, seconds] = time.split(":");
-  hours = parseInt(hours, 10);
 
-  if (format === "PM" && hours !== 12) {
-    hours += 12;
-  }
-  if (format === "AM" && hours === 12) {
-    hours = 0;
-  }
-  hours = String(hours).padStart(2, "0");
-  return `${hours}:${minutes}:${seconds}`;
-}
+// let time12h = "07:05:45AM";
+// function convertTimeTo24h(time12h) {
+//   let format = time12h.slice(-2);
+//   let time = time12h.slice(0, -2);
+//   let [hours, minutes, seconds] = time.split(":");
+//   hours = parseInt(hours, 10);
 
-console.log(convertTimeTo24h(time12h));
+//   if (format === "PM" && hours !== 12) {
+//     hours += 12;
+//   }
+//   if (format === "AM" && hours === 12) {
+//     hours = 0;
+//   }
+//   hours = String(hours).padStart(2, "0");
+//   return `${hours}:${minutes}:${seconds}`;
+// }
+
+// console.log(convertTimeTo24h(time12h));
+
 // -----------------------------------------------------------------------------------------
 
 // 19 - Find the largest number in an array and how many times it occured
