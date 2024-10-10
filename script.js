@@ -1,19 +1,46 @@
+// 23 - Find Apples&Oranges s to t is the area of Sam's house a and b are the positions of
+//      apples and orange tree respectively and you are given two arrays of positions of the
+//      the apples and orange landing along x-axis
+//      You have to find how many apples and oranges land inside the Sam's house
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+  let applesCount = 0;
+  let orangesCount = 0;
+  for (let i = 0; i < apples.length; i++) {
+    let differenceA = apples[i] + a;
+    if (differenceA >= s) {
+      applesCount++;
+    }
+  }
+  for (let j = 0; j < oranges.length; j++) {
+    let differenceO = oranges[j] + b;
+    if (differenceO <= t) {
+      orangesCount++;
+    }
+  }
+  console.log(applesCount);
+  console.log(orangesCount);
+}
+
+countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
+
+// -----------------------------------------------------------------------------------------
+
 // 22 - Rounding off the grades, you wil receive an array of grades of students
 //      if the grade is multiple of 5 and less than 3 we round it to the next multiple of 5
 //      otherwise we keep it same
-let arr = [73, 67, 38, 33];
-function roundOff(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let remainder = arr[i] % 5;
-    console.log(remainder);
-    let addition = 5 - remainder;
-    if (remainder > 2 && arr[i] > 37) {
-      arr[i] += addition;
-    }
-  }
-  return arr;
-}
-console.log(roundOff(arr)); // [75, 67, 40, 33];
+// let arr = [73, 67, 38, 33];
+// function roundOff(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let remainder = arr[i] % 5;
+//     console.log(remainder);
+//     let addition = 5 - remainder;
+//     if (remainder > 2 && arr[i] > 37) {
+//       arr[i] += addition;
+//     }
+//   }
+//   return arr;
+// }
+// console.log(roundOff(arr)); // [75, 67, 40, 33];
 // -----------------------------------------------------------------------------------------
 
 // 21 - Find if the given number is prime or not
