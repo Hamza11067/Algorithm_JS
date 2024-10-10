@@ -7,13 +7,13 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
   let orangesCount = 0;
   for (let i = 0; i < apples.length; i++) {
     let differenceA = apples[i] + a;
-    if (differenceA >= s) {
+    if (differenceA >= s && differenceA <= t) {
       applesCount++;
     }
   }
   for (let j = 0; j < oranges.length; j++) {
     let differenceO = oranges[j] + b;
-    if (differenceO <= t) {
+    if (differenceO >= s && differenceO <= t) {
       orangesCount++;
     }
   }
