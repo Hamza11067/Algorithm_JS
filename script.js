@@ -1,27 +1,45 @@
+// 24 - Kangroo problem
+
+function kangaroo(x1, v1, x2, v2) {
+  if (v1 > v2 && (x2 - x1) % (v1 - v2) === 0) {
+    return "YES";
+  } else if (v1 === v2 && x1 === x2) {
+    return "YES";
+  } else {
+    return "NO";
+  }
+}
+
+console.log(kangaroo(0, 3, 4, 2)); // Output: YES
+console.log(kangaroo(0, 2, 5, 3)); // Output: NO
+console.log("Hello Algorithms");
+// -----------------------------------------------------------------------------------------
+
 // 23 - Find Apples&Oranges s to t is the area of Sam's house a and b are the positions of
 //      apples and orange tree respectively and you are given two arrays of positions of the
 //      the apples and orange landing along x-axis
 //      You have to find how many apples and oranges land inside the Sam's house
-function countApplesAndOranges(s, t, a, b, apples, oranges) {
-  let applesCount = 0;
-  let orangesCount = 0;
-  for (let i = 0; i < apples.length; i++) {
-    let differenceA = apples[i] + a;
-    if (differenceA >= s && differenceA <= t) {
-      applesCount++;
-    }
-  }
-  for (let j = 0; j < oranges.length; j++) {
-    let differenceO = oranges[j] + b;
-    if (differenceO >= s && differenceO <= t) {
-      orangesCount++;
-    }
-  }
-  console.log(applesCount);
-  console.log(orangesCount);
-}
 
-countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
+// function countApplesAndOranges(s, t, a, b, apples, oranges) {
+//   let applesCount = 0;
+//   let orangesCount = 0;
+//   for (let i = 0; i < apples.length; i++) {
+//     let differenceA = apples[i] + a;
+//     if (differenceA >= s && differenceA <= t) {
+//       applesCount++;
+//     }
+//   }
+//   for (let j = 0; j < oranges.length; j++) {
+//     let differenceO = oranges[j] + b;
+//     if (differenceO >= s && differenceO <= t) {
+//       orangesCount++;
+//     }
+//   }
+//   console.log(applesCount);
+//   console.log(orangesCount);
+// }
+
+// countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
 
 // -----------------------------------------------------------------------------------------
 
