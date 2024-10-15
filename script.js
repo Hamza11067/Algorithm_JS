@@ -1,18 +1,64 @@
-// 24 - Kangroo problem
+// 25 - Between two sets
+function count(a, b) {
+  let count = 0;
 
-function kangaroo(x1, v1, x2, v2) {
-  if (v1 > v2 && (x2 - x1) % (v1 - v2) === 0) {
-    return "YES";
-  } else if (v1 === v2 && x1 === x2) {
-    return "YES";
-  } else {
-    return "NO";
+  // Helper function to calculate GCD
+  function gcd(a, b) {
+    while (b !== 0) {
+      [a, b] = [b, a % b];
+    }
+    return a;
   }
+
+  // Helper function to calculate LCM
+  function lcm(a, b) {
+    return (a * b) / gcd(a, b);
+  }
+
+  // Find LCM of array a
+  let lcmA = a[0];
+  for (let i = 1; i < a.length; i++) {
+    lcmA = lcm(lcmA, a[i]);
+  }
+
+  // Find GCD of array b
+  let bignumber = b[0];
+  for (let i = 1; i < b.length; i++) {
+    bignumber = gcd(bignumber, b[i]);
+  }
+
+  // Count numbers that are multiples of lcmA and divisors of bignumber
+  for (let i = lcmA; i <= bignumber; i += lcmA) {
+    if (bignumber % i === 0) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
-console.log(kangaroo(0, 3, 4, 2)); // Output: YES
-console.log(kangaroo(0, 2, 5, 3)); // Output: NO
-console.log("Hello Algorithms");
+// Example usage:
+const a = [2, 4];
+const b = [16, 32, 96];
+console.log(count(a, b)); // Output: 3
+
+// -----------------------------------------------------------------------------------------
+
+// 24 - Kangroo problem
+
+// function kangaroo(x1, v1, x2, v2) {
+//   if (v1 > v2 && (x2 - x1) % (v1 - v2) === 0) {
+//     return "YES";
+//   } else if (v1 === v2 && x1 === x2) {
+//     return "YES";
+//   } else {
+//     return "NO";
+//   }
+// }
+
+// console.log(kangaroo(0, 3, 4, 2)); // Output: YES
+// console.log(kangaroo(0, 2, 5, 3)); // Output: NO
+
 // -----------------------------------------------------------------------------------------
 
 // 23 - Find Apples&Oranges s to t is the area of Sam's house a and b are the positions of
