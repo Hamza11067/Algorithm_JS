@@ -1,46 +1,71 @@
-// 25 - Between two sets
-function count(a, b) {
-  let count = 0;
+// 26 - Breaking the records
 
-  // Helper function to calculate GCD
-  function gcd(a, b) {
-    while (b !== 0) {
-      [a, b] = [b, a % b];
-    }
-    return a;
-  }
+function breakingRecords(scores) {
+  let minScore = scores[0];
+  let maxScore = scores[0];
+  let maxCount = 0;
+  let minCount = 0;
 
-  // Helper function to calculate LCM
-  function lcm(a, b) {
-    return (a * b) / gcd(a, b);
-  }
-
-  // Find LCM of array a
-  let lcmA = a[0];
-  for (let i = 1; i < a.length; i++) {
-    lcmA = lcm(lcmA, a[i]);
-  }
-
-  // Find GCD of array b
-  let bignumber = b[0];
-  for (let i = 1; i < b.length; i++) {
-    bignumber = gcd(bignumber, b[i]);
-  }
-
-  // Count numbers that are multiples of lcmA and divisors of bignumber
-  for (let i = lcmA; i <= bignumber; i += lcmA) {
-    if (bignumber % i === 0) {
-      count++;
+  for (let i = 1; i < scores.length; i++) {
+    if (scores[i] > maxScore) {
+      maxCount++;
+      maxScore = scores[i];
+    } else if (scores[i] < minScore) {
+      minCount++;
+      minScore = scores[i];
     }
   }
-
-  return count;
+  // console.log(maxCount, minCount);
+  return [maxCount, minCount];
 }
 
-// Example usage:
-const a = [2, 4];
-const b = [16, 32, 96];
-console.log(count(a, b)); // Output: 3
+let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
+console.log(breakingRecords(scores));
+// -----------------------------------------------------------------------------------------
+
+// 25 - Between two sets
+// function count(a, b) {
+//   let count = 0;
+
+//   // Helper function to calculate GCD
+//   function gcd(a, b) {
+//     while (b !== 0) {
+//       [a, b] = [b, a % b];
+//     }
+//     return a;
+//   }
+
+//   // Helper function to calculate LCM
+//   function lcm(a, b) {
+//     return (a * b) / gcd(a, b);
+//   }
+
+//   // Find LCM of array a
+//   let lcmA = a[0];
+//   for (let i = 1; i < a.length; i++) {
+//     lcmA = lcm(lcmA, a[i]);
+//   }
+
+//   // Find GCD of array b
+//   let bignumber = b[0];
+//   for (let i = 1; i < b.length; i++) {
+//     bignumber = gcd(bignumber, b[i]);
+//   }
+
+//   // Count numbers that are multiples of lcmA and divisors of bignumber
+//   for (let i = lcmA; i <= bignumber; i += lcmA) {
+//     if (bignumber % i === 0) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// // Example usage:
+// const a = [2, 4];
+// const b = [16, 32, 96];
+// console.log(count(a, b)); // Output: 3
 
 // -----------------------------------------------------------------------------------------
 
