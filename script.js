@@ -1,26 +1,83 @@
-// 26 - Breaking the records
+// // 28 - Selection sort
+// function selectionSort(arr) {
+//   let n = arr.length;
 
-function breakingRecords(scores) {
-  let minScore = scores[0];
-  let maxScore = scores[0];
-  let maxCount = 0;
-  let minCount = 0;
+//   for (let i = 0; i < n - 1; i++) {
+//       // Assume the current index is the minimum
+//       let minIndex = i;
 
-  for (let i = 1; i < scores.length; i++) {
-    if (scores[i] > maxScore) {
-      maxCount++;
-      maxScore = scores[i];
-    } else if (scores[i] < minScore) {
-      minCount++;
-      minScore = scores[i];
+//       // Check the rest of the array for a smaller element
+//       for (let j = i + 1; j < n; j++) {
+//           if (arr[j] < arr[minIndex]) {
+//               minIndex = j;
+//           }
+//       }
+
+//       // If a smaller element was found, swap it with the current element
+//       if (minIndex !== i) {
+//           let temp = arr[i];
+//           arr[i] = arr[minIndex];
+//           arr[minIndex] = temp;
+//       }
+//   }
+
+//   return arr;
+// }
+
+// // Example usage:
+// let arr = [64, 25, 12, 22, 11];
+// console.log("Sorted array:", selectionSort(arr));
+
+// -----------------------------------------------------------------------------------------
+
+// 27 - Sub Array Division
+
+function subArrayDivision(s, d, m) {
+  let count = 0;
+  if (s.length == 1) {
+    return 1;
+  }
+
+  for (let i = 0; i <= s.length - m; i++) {
+    let sum = 0;
+    for (let j = i; j < i + m; j++) {
+      sum += s[j];
+    }
+    if (sum === d) {
+      count++;
     }
   }
-  // console.log(maxCount, minCount);
-  return [maxCount, minCount];
+  return count;
 }
 
-let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
-console.log(breakingRecords(scores));
+let s = [2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1];
+console.log(subArrayDivision(s, 18, 7)); // Output: 3
+
+// -----------------------------------------------------------------------------------------
+
+// 26 - Breaking the records
+
+// function breakingRecords(scores) {
+//   let minScore = scores[0];
+//   let maxScore = scores[0];
+//   let maxCount = 0;
+//   let minCount = 0;
+
+//   for (let i = 1; i < scores.length; i++) {
+//     if (scores[i] > maxScore) {
+//       maxCount++;
+//       maxScore = scores[i];
+//     } else if (scores[i] < minScore) {
+//       minCount++;
+//       minScore = scores[i];
+//     }
+//   }
+//   // console.log(maxCount, minCount);
+//   return [maxCount, minCount];
+// }
+
+// let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
+// console.log(breakingRecords(scores));
 // -----------------------------------------------------------------------------------------
 
 // 25 - Between two sets
