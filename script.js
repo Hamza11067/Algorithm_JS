@@ -1,3 +1,24 @@
+// 31 - Day of the Programmer (256th day of the year)
+// function dayOfTheProgrammer(year) {
+//   let leapYear = false;
+//   if (year < 1918 && year % 4 == 0) {
+//     leapYear = true;
+//   } else if ((year = 1918)) {
+//     return `26.09.${year}`;
+//   } else if (year % 4 == 0 && (year % 400 == 0 || year % 100 != 0)) {
+//     leapYear = true;
+//   }
+//   if (leapYear) {
+//     return `12.09.${year}`;
+//   } else {
+//     return `13.09.${year}`;
+//   }
+// }
+
+// console.log(dayOfTheProgrammer(2000));
+
+// -----------------------------------------------------------------------------------------
+
 // 30 - Migratory Birds
 
 // function migratoryBirds(arr) {
