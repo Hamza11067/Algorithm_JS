@@ -19,32 +19,32 @@
 // -----------------------------------------------------------------------------------------
 
 // 28 - Selection sort
-function selectionSort(arr) {
-  let n = arr.length;
+// function selectionSort(arr) {
+//   let n = arr.length;
 
-  for (let i = 0; i < n - 1; i++) {
-    let minIndex = i;
+//   for (let i = 0; i < n - 1; i++) {
+//     let minIndex = i;
 
-    for (let j = i + 1; j < n; j++) {
-      if (arr[j] < arr[minIndex]) {
-        minIndex = j;
-      }
-    }
+//     for (let j = i + 1; j < n; j++) {
+//       if (arr[j] < arr[minIndex]) {
+//         minIndex = j;
+//       }
+//     }
 
-    // swaping k do tarike haen 1-teesra variable use kro 2-array destructuring
-    if (minIndex !== i) {
-      //   let temp = arr[i];
-      //   arr[i] = arr[minIndex];
-      //   arr[minIndex] = temp;
-      [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
-    }
-  }
+//     // swaping k do tarike haen 1-teesra variable use kro 2-array destructuring
+//     if (minIndex !== i) {
+//       //   let temp = arr[i];
+//       //   arr[i] = arr[minIndex];
+//       //   arr[minIndex] = temp;
+//       [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+//     }
+//   }
 
-  return arr;
-}
+//   return arr;
+// }
 
-// Example usage:
-let arr = [64, 25, 12, 22, 11];
-console.log("Sorted array:", selectionSort(arr));
+// // Example usage:
+// let arr = [64, 25, 12, 22, 11];
+// console.log(selectionSort(arr));
 
 // -----------------------------------------------------------------------------------------

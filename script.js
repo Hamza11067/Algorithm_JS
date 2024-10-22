@@ -1,5 +1,29 @@
 // 30 - Migratory Birds
 
+// function migratoryBirds(arr) {
+//   let frequencyMap = {};
+//   let mostFrequent = arr[0];
+//   let maxCount = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (frequencyMap[arr[i]]) {
+//       frequencyMap[arr[i]]++;
+//     } else {
+//       frequencyMap[arr[i]] = 1;
+//     }
+
+//     if (
+//       frequencyMap[arr[i]] > maxCount ||
+//       (frequencyMap[arr[i]] === maxCount && arr[i] < mostFrequent)
+//     ) {
+//       maxCount = frequencyMap[arr[i]];
+//       mostFrequent = arr[i];
+//     }
+//   }
+//   return mostFrequent;
+// }
+
+// console.log(migratoryBirds([1, 4, 3, 3, 4, 4, 5, 3]));
 // -----------------------------------------------------------------------------------------
 
 // 29 - Divisible Sum Pairs
