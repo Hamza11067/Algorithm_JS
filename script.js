@@ -1,3 +1,24 @@
+// 32 - Bill Division
+function billDivision(arr, k, b) {
+  //   arr.splice(k, 1); // splice method k illawa aik aur tarika b hai 
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (i == k) {
+      continue; // is index wala element skip kr do 
+    }
+    sum += arr[i];
+  }
+  let half = sum / 2;
+  if (half == b) {
+    return "Bon Apetit";
+  } else {
+    let remaining = b - half;
+    return remaining;
+  }
+}
+
+console.log(billDivision([3, 10, 2, 9], 1, 12));
+
 // 31 - Day of the Programmer (256th day of the year)
 // function dayOfTheProgrammer(year) {
 //   let leapYear = false;
