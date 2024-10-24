@@ -1,3 +1,31 @@
+// 5 - Counting sort
+function countingSort(arr) {
+  let countMap = [];
+  let newArr = [];
+
+  for (let element of arr) {
+    if (countMap[element]) {
+      countMap[element]++;
+    } else {
+      countMap[element] = 1;
+    }
+  }
+  
+  for (let i = 0; i < countMap.length; i++) {
+    while (countMap[i] > 0) {
+      newArr.push(i);
+      countMap[i]--; 
+    }
+  }
+
+  return newArr;
+}
+
+let arr = [4, 2, 2, 6, 3, 3, 1, 6, 5, 2, 3];
+console.log(countingSort(arr));
+
+// ------------------------------------------------------------------------
+
 // 4 - Quick sort
 // function quickSort(arr) {
 //   if (arr.length <= 1) {
