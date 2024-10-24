@@ -1,9 +1,8 @@
 // 35 - Counting Valleys
 function countingValleys(steps, path) {
-    for (let i = 0; i < steps; i++) {
-        console.log(path[i]);
-        
-    }
+  for (let i = 0; i < steps; i++) {
+    console.log(path[i]);
+  }
 }
 
 // console.log(countingValleys(8, "UDDDUDUU"));
@@ -24,7 +23,7 @@ function countingValleys(steps, path) {
 
 // 33 - Sales by Match
 // function sockMerchant(arr) {
-//   let pairMap = {};
+//   let pairMap = [];
 //   let pairs = 0;
 
 //   for (let element of arr) {
