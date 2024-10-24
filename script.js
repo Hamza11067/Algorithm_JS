@@ -1,23 +1,47 @@
-// 32 - Bill Division
-function billDivision(arr, k, b) {
-  //   arr.splice(k, 1); // splice method k illawa aik aur tarika b hai 
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (i == k) {
-      continue; // is index wala element skip kr do 
+// 33 - Sales by Match
+function sockMerchant(arr) {
+  let pairMap = {};
+  let pairs = 0;
+
+  for (let element of arr) {
+    if (pairMap[element]) {
+      pairMap[element]++;
+    } else {
+      pairMap[element] = 1;
     }
-    sum += arr[i];
   }
-  let half = sum / 2;
-  if (half == b) {
-    return "Bon Apetit";
-  } else {
-    let remaining = b - half;
-    return remaining;
+
+  for (const key in pairMap) {
+    pairs += Math.floor(pairMap[key] / 2);
   }
+  return pairs;
 }
 
-console.log(billDivision([3, 10, 2, 9], 1, 12));
+console.log(sockMerchant([1, 2, 1, 2, 3, 1, 2]));
+// -----------------------------------------------------------------------------------------
+
+// 32 - Bill Division
+// function billDivision(arr, k, b) {
+//   //   arr.splice(k, 1); // splice method k illawa aik aur tarika b hai
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i == k) {
+//       continue; // is index wala element skip kr do
+//     }
+//     sum += arr[i];
+//   }
+//   let half = sum / 2;
+//   if (half == b) {
+//     return "Bon Apetit";
+//   } else {
+//     let remaining = b - half;
+//     return remaining;
+//   }
+// }
+
+// console.log(billDivision([3, 10, 2, 9], 1, 12));
+
+// -----------------------------------------------------------------------------------------
 
 // 31 - Day of the Programmer (256th day of the year)
 // function dayOfTheProgrammer(year) {
