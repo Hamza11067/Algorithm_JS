@@ -681,11 +681,19 @@ function countingValleys(steps, path) {
 // 9 - Factorial of given number
 
 // function factorial(n) {
-//   let f = 1;
-//   for (let i = 1; i < n; i++) {
-//     f = f * i;
-//   }
-//   console.log(`factorial of ${n} is ${f}`);
+  // by using loop
+  // let f = 1;
+  // for (let i = 1; i < n; i++) {
+  //   f = f * i;
+  // }
+  // return f;
+
+  // by recursion
+  // if (n <= 1) {
+  //   return 1;
+  // }
+
+  // return n * factorial(n - 1);
 // }
 
 // console.log(factorial(10));
