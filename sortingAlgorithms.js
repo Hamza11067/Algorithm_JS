@@ -1,24 +1,22 @@
-// 11 - Sort an array using bubble sort algorithm
+// 3 - Insertion sort
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    for (let j = i; j > 0; j--) {
+      if (arr[j] < arr[j - 1]) {
+        [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]];
+      } else {
+        break;
+      }
+    }
+  }
+  return arr;
+}
 
-// let arr = [3, 2, 5, 9, 7, 1, 0, 4, 6, 8];
-// function bubbleSort(arr) {
-//   for (let i = 0; i < arr.length - 1; i++) {
-//     for (let j = 0; j < arr.length - 1 - i; j++) {
-//       if (arr[j] > arr[j + 1]) {
-//         let temp = arr[j];
-//         arr[j] = arr[j + 1];
-//         arr[j + 1] = temp;
-//       }
-//     }
-//   }
-//   return arr;
-// }
-
-// console.log(bubbleSort(arr));
+console.log(insertionSort([7, 2, 4, 1, 5])); // Output: [1, 2, 4, 5, 7]
 
 // -----------------------------------------------------------------------------------------
 
-// 28 - Selection sort
+// 2 - Selection sort
 // function selectionSort(arr) {
 //   let n = arr.length;
 
@@ -48,3 +46,21 @@
 // console.log(selectionSort(arr));
 
 // -----------------------------------------------------------------------------------------
+
+// 1 - Sort an array using bubble sort algorithm
+
+// let arr = [3, 2, 5, 9, 7, 1, 0, 4, 6, 8];
+// function bubbleSort(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     for (let j = 0; j < arr.length - 1 - i; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log(bubbleSort(arr));

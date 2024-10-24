@@ -1,4 +1,12 @@
 // 35 - Counting Valleys
+function countingValleys(steps, path) {
+    for (let i = 0; i < steps; i++) {
+        console.log(path[i]);
+        
+    }
+}
+
+// console.log(countingValleys(8, "UDDDUDUU"));
 
 // -----------------------------------------------------------------------------------------
 
@@ -49,7 +57,7 @@
 //   }
 //   let half = sum / 2;
 //   if (half == b) {
-//     return "Bon Apetit";
+//     return "Bon Appetit";
 //   } else {
 //     let remaining = b - half;
 //     return remaining;
