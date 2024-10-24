@@ -1,23 +1,40 @@
+// 35 - Counting Valleys
+
+// -----------------------------------------------------------------------------------------
+
+// 34 - Drawing book
+// function pageCount(n, p) {
+//   // n is total number of pages and p is the page  number we want to go
+//   let frontPages = Math.floor(p / 2);
+//   let backPages = Math.floor(n / 2) - Math.floor(p / 2);
+//   return Math.min(frontPages, backPages);
+// }
+
+// console.log(pageCount(5, 3)); // 1
+
+// -----------------------------------------------------------------------------------------
+
 // 33 - Sales by Match
-function sockMerchant(arr) {
-  let pairMap = {};
-  let pairs = 0;
+// function sockMerchant(arr) {
+//   let pairMap = {};
+//   let pairs = 0;
 
-  for (let element of arr) {
-    if (pairMap[element]) {
-      pairMap[element]++;
-    } else {
-      pairMap[element] = 1;
-    }
-  }
+//   for (let element of arr) {
+//     if (pairMap[element]) {
+//       pairMap[element]++;
+//     } else {
+//       pairMap[element] = 1;
+//     }
+//   }
 
-  for (const key in pairMap) {
-    pairs += Math.floor(pairMap[key] / 2);
-  }
-  return pairs;
-}
+//   for (const key in pairMap) {
+//     pairs += Math.floor(pairMap[key] / 2);
+//   }
+//   return pairs;
+// }
 
-console.log(sockMerchant([1, 2, 1, 2, 3, 1, 2]));
+// console.log(sockMerchant([1, 2, 1, 2, 3, 1, 2])); // 2
+
 // -----------------------------------------------------------------------------------------
 
 // 32 - Bill Division
